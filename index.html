@@ -35,6 +35,23 @@ sessions and generate the memories you've asked the app to capture. They are not
 sold, shared with advertisers, or used for any purpose other than providing this
 service to you.</p>
 
+<h2>How AI is used</h2>
+<p>Stories We Carry uses artificial intelligence to hold a natural conversation with
+you. Before your first interview, the app explains this and asks for your permission.
+Three Amazon Web Services (AWS) services are involved:</p>
+<ul>
+  <li><strong>Speech to text:</strong> your spoken answers are converted to text by
+  Amazon Transcribe.</li>
+  <li><strong>The interviewer:</strong> that text is sent to Claude, an AI model made
+  by Anthropic, which runs inside AWS through Amazon Bedrock. Claude uses it to ask
+  thoughtful follow-up questions. Anthropic does not receive your data, and Amazon
+  Bedrock does not store it or use it to train models.</li>
+  <li><strong>The interviewer's voice:</strong> each question is turned into speech
+  by Amazon Polly.</li>
+</ul>
+<p>Our AWS account is configured to opt out of AWS using any of this content to
+improve or train its AI services. Your stories are never used to train AI models.</p>
+
 <h2>Where it's stored</h2>
 <p>Data is stored using Amazon Web Services (AWS) infrastructure. Access is
 restricted to what the app needs to function.</p>
@@ -44,7 +61,7 @@ restricted to what the app needs to function.</p>
 at the address below.</p>
 
 <h2>Contact</h2>
-<p><a href="mailto:26.capture.memory@gmail.com">26.capture.memory@gmail.com</a></p>
+<p><a href="mailto:privacy@storieswecarry.app">privacy@storieswecarry.app</a></p>
 
 </body>
 </html>
