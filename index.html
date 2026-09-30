@@ -2,92 +2,338 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Stories We Carry — Privacy Policy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stories We Carry</title>
+<meta name="description" content="Stories We Carry is an iPhone app that interviews your parents about their lives, out loud. They answer by talking, and it keeps their stories, and with permission their voice, for the family.">
+<meta property="og:title" content="Stories We Carry">
+<meta property="og:description" content="Stories We Carry is an iPhone app that interviews your parents about their lives, out loud. They answer by talking, and it keeps their stories, and with permission their voice, for the family.">
+<meta property="og:url" content="https://storieswecarry.app/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#221511">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2060%2070%22%3E%3Cpath%20d%3D%22M31%202%20C44%2012%2058%2024%2058%2036%20C58%2050%2044%2060%2029%2068%20C14%2060%202%2050%202%2036%20C2%2024%2017%2012%2031%202Z%22%20fill%3D%22%23D65A1C%22/%3E%3Cpath%20d%3D%22M30%2018%20C39%2025%2048%2032%2048%2040%20C48%2050%2039%2058%2030%2064%20C20%2058%2011%2050%2011%2040%20C11%2032%2021%2025%2030%2018Z%22%20fill%3D%22%23F29A2E%22/%3E%3Cpath%20d%3D%22M28%2033%20C34%2038%2040%2043%2040%2048%20C40%2055%2034%2060%2029%2064%20C23%2060%2017%2055%2017%2048%20C17%2043%2023%2038%2028%2033Z%22%20fill%3D%22%23FFCB6E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<style>
+/* Layout: the app icon's world. Dark ember bands (hero, voice, footer) around plain white reading sections; one committed look in every theme. */
+:root{
+  --espresso:#221511; --rust:#8E3F17; --ember:#D65A1C; --amber:#F29A2E; --glow:#FFCB6E;
+  --paper:#FFFFFF; --ink:#2A1C16; --muted:#6A574C; --rule:#E7DCD3; --warm:#F7F1EC;
+  --on-dark:#FFF3E6; --on-dark-muted:#D8C2B1; --link:#A8410E;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.1875rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.02;font-weight:800}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;font-weight:800}
+h3{font-size:1.3rem;line-height:1.25;font-weight:700}
+p{margin:0}
+.skip{position:absolute;left:16px;top:-60px;background:var(--glow);color:var(--espresso);padding:10px 14px;border-radius:4px;font-weight:700;z-index:10}
+.skip:focus{top:12px}
+.shell{max-width:1120px;margin:0 auto;padding-inline:20px}
+section.block{padding-block:84px}
+
+/* dark bands take the icon's gradient */
+.dark{background:linear-gradient(180deg,var(--espresso) 0%,#3A1F14 55%,var(--rust) 130%);color:var(--on-dark)}
+.dark h1,.dark h2,.dark h3{color:var(--on-dark)}
+.dark a{color:var(--glow)}
+
+/* header sits inside the hero band */
+header.top .shell{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 28px;padding-block:22px}
+.wordmark{display:inline-flex;align-items:center;gap:10px;font:700 1.3rem/1 var(--display);color:var(--on-dark);text-decoration:none;letter-spacing:-.01em}
+.dark a.wordmark{color:var(--on-dark)}
+.wordmark svg{width:26px;height:30px;flex:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 24px;font-size:1rem}
+header.top nav a{color:var(--on-dark);text-decoration:none}
+header.top nav a:hover{text-decoration:underline}
+header.top nav a.privacy{color:var(--glow);text-decoration:underline}
+
+/* hero */
+.hero .shell.body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:end;padding-block:48px 96px}
+.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.hero h1 em{font-style:normal;color:var(--glow)}
+.lede{font-size:1.3rem;line-height:1.55;color:var(--on-dark);max-width:34ch}
+.lede strong{color:var(--glow)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.btn{display:inline-block;background:var(--glow);color:var(--espresso);font:700 1.05rem/1 var(--body);padding:17px 24px;border-radius:4px;text-decoration:none}
+.dark a.btn{color:var(--espresso)}
+.btn:hover{background:#FFD98F;text-decoration:none}
+.aside{color:var(--on-dark-muted);font-size:1rem}
+
+/* the spoken exchange: a transcript, lines ruled like a notebook */
+.exchange{margin:0;display:flex;flex-direction:column;min-width:0;border-left:3px solid var(--ember);padding-left:22px}
+.exchange .cap{font-size:.95rem;color:var(--on-dark-muted);font-style:italic;padding-bottom:10px}
+.turn{padding-block:12px;border-top:1px solid rgba(255,243,230,.14);display:flex;flex-direction:column;gap:2px}
+.who{font:700 .95rem/1.3 var(--display);color:var(--on-dark-muted)}
+.app .who{color:var(--amber)}
+.said{font-size:1.1rem;line-height:1.5;color:var(--on-dark)}
+.spell{font-weight:700;letter-spacing:.14em}
+
+/* how it works */
+.intro{display:flex;flex-direction:column;gap:14px;max-width:44rem}
+.intro p{color:var(--muted);font-size:1.2rem}
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 64px;margin-top:52px}
+.feature{display:flex;flex-direction:column;gap:10px;min-width:0}
+.feature h3{display:flex;gap:12px;align-items:baseline}
+.feature h3::before{content:"";flex:none;width:10px;height:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg) translateY(-2px);background:var(--ember)}
+.feature p{max-width:62ch}
+.topics{margin-top:56px;border-top:1px solid var(--rule);padding-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px 48px}
+.topics > div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.topics p{max-width:40ch}
+.topics ol{margin:0;padding:0;list-style:none;columns:2;column-gap:40px;font:500 1.15rem/1.3 var(--display)}
+.topics li{padding-block:9px;border-bottom:1px solid var(--rule);break-inside:avoid}
+
+/* voice */
+.voice .shell{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:64px;align-items:start}
+.voice blockquote{margin:0;display:flex;flex-direction:column;gap:20px;min-width:0}
+.voice blockquote p{font:700 clamp(1.7rem,3.3vw,2.5rem)/1.2 var(--display);color:var(--on-dark);text-wrap:pretty;letter-spacing:-.01em}
+.voice blockquote p span{color:var(--glow)}
+.voice cite{font:400 1rem/1.3 var(--body);font-style:normal;color:var(--on-dark-muted)}
+.voice .facts{display:flex;flex-direction:column;gap:16px;min-width:0}
+.voice .facts h2{font-size:clamp(1.5rem,2.6vw,1.95rem)}
+.voice .facts p{color:var(--on-dark)}
+.planned{border-top:1px solid rgba(255,243,230,.18);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.planned strong{font-family:var(--display);color:var(--glow)}
+
+/* archive / faq */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.split > div{display:flex;flex-direction:column;gap:16px;min-width:0}
+dl.faq{margin:0;display:flex;flex-direction:column}
+dl.faq > div{padding-block:16px;border-top:1px solid var(--rule)}
+dl.faq > div:last-child{border-bottom:1px solid var(--rule)}
+dl.faq dt{font:700 1.1rem/1.3 var(--display)}
+dl.faq dd{margin:6px 0 0}
+
+/* get involved */
+.involve{background:var(--warm)}
+.audiences{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;border-top:2px solid var(--ink)}
+.aud{padding:26px 28px 8px 0;display:flex;flex-direction:column;gap:12px;min-width:0;scroll-margin-top:24px}
+.aud + .aud{padding-left:28px;border-left:1px solid var(--rule)}
+.aud:target h3{background:linear-gradient(transparent 60%,rgba(242,154,46,.35) 60%)}
+.aud p{font-size:1.05rem}
+.contact{margin-top:40px;padding-top:28px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.contact .addr{font:700 clamp(1.3rem,2.6vw,1.7rem)/1.2 var(--display);color:var(--ink);word-break:break-all}
+.copy{font:700 .9rem/1 var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:11px 14px;cursor:pointer}
+.copy[data-done]{background:var(--ember)}
+.contact .hint{color:var(--muted);font-size:1rem;flex-basis:100%}
+
+/* founder note */
+.note{max-width:44rem;display:flex;flex-direction:column;gap:18px}
+.note p{font-size:1.2rem}
+.note .sig{font:700 1.05rem/1.3 var(--display)}
+.note .faith{color:var(--muted);font-style:italic;font-size:1.12rem}
+.name{margin-top:14px;border-left:3px solid var(--ember);padding-left:22px;display:flex;flex-direction:column;gap:10px}
+
+/* footer */
+footer.site{background:var(--espresso);color:var(--on-dark-muted);padding-block:44px 56px;font-size:.98rem}
+footer.site .shell{display:flex;flex-direction:column;gap:14px}
+footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px}
+footer.site a{color:var(--on-dark)}
+
+@media (max-width:860px){
+  .hero .shell.body,.split,.voice .shell,.topics{grid-template-columns:1fr}
+  .hero .shell.body{gap:44px;padding-block:28px 64px}
+  .features{grid-template-columns:1fr;gap:36px}
+  .audiences{grid-template-columns:1fr}
+  .aud,.aud + .aud{padding:24px 0 16px;border-left:0}
+  .aud + .aud{border-top:1px solid var(--rule)}
+  section.block{padding-block:60px}
+}
+@media (max-width:480px){
+  body{font-size:1.125rem}
+  .shell{padding-inline:16px}
+  .topics ol{columns:1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body style="font-family: -apple-system, system-ui, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222;">
+<body>
+<a class="skip" href="#main">Skip to main content</a>
 
-<h1>Privacy Policy</h1>
-<p><em>Last updated: September 24, 2026</em></p>
+<div class="hero dark">
+  <header class="top">
+    <div class="shell">
+      <a class="wordmark" href="https://storieswecarry.app/">
+        <svg viewBox="0 0 60 70" aria-hidden="true"><path d="M31 2 C44 12 58 24 58 36 C58 50 44 60 29 68 C14 60 2 50 2 36 C2 24 17 12 31 2Z" fill="#D65A1C"/><path d="M30 18 C39 25 48 32 48 40 C48 50 39 58 30 64 C20 58 11 50 11 40 C11 32 21 25 30 18Z" fill="#F29A2E"/><path d="M28 33 C34 38 40 43 40 48 C40 55 34 60 29 64 C23 60 17 55 17 48 C17 43 23 38 28 33Z" fill="#FFCB6E"/></svg>
+        Stories We Carry
+      </a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#voice">Their voice</a></li>
+          <li><a href="#try-it">Try it</a></li>
+          <li><a class="privacy" href="https://storieswecarry.app/privacy/">Privacy policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<p>Stories We Carry is a small, independently-run app that helps people record their personal
-memories and stories through guided conversation. This policy explains what
-information the app collects and how it's used.</p>
+  <section class="shell body" aria-labelledby="hero-h">
+    <div class="hero-copy">
+      <h1 id="hero-h">The questions you keep meaning to ask <em>your mom and dad.</em></h1>
+      <p class="lede">Stories We Carry is an iPhone app that interviews your parents about their lives. It asks a question out loud, they answer out loud, and it follows up the way a good listener would. <strong>They never have to read the screen.</strong></p>
+      <div class="cta-row">
+        <a class="btn" href="#try-it">Ask to join the beta</a>
+        <span class="aside">Now in a small beta on iPhone</span>
+      </div>
+    </div>
 
-<h2>What we collect</h2>
-<ul>
-  <li><strong>Account information:</strong> the email address you sign in with, and
-  your name, as given when your account was set up. The app may ask what you'd like to
-  be called and remember your answer.</li>
-  <li><strong>Your voice:</strong> audio captured during an interview session, which is
-  transcribed to text. If you agree, we also keep recordings of your spoken answers
-  (see "Recordings of your voice" below).</li>
-  <li><strong>Transcripts and summaries:</strong> the text of your answers, and
-  summaries derived from them (such as names or relationships you mention), so the
-  app can remember context across sessions.</li>
-</ul>
+    <figure class="exchange" aria-label="An example of how a conversation goes">
+      <figcaption class="cap">An example of how a turn goes</figcaption>
+      <div class="turn app"><span class="who">Stories We Carry</span><p class="said">What was your first job?</p></div>
+      <div class="turn"><span class="who">Your dad</span><p class="said">At the drugstore on Main Street. Mr. Haskell let me run the soda fountain.</p></div>
+      <div class="turn app"><span class="who">Stories We Carry</span><p class="said">How do you spell Haskell?</p></div>
+      <div class="turn"><span class="who">Your dad</span><p class="said"><span class="spell">H-A-S-K-E-L-L</span>.</p></div>
+      <div class="turn app"><span class="who">Stories We Carry</span><p class="said">Haskell, H-A-S-K-E-L-L. Got it. What was it like running the soda fountain at that age?</p></div>
+    </figure>
+  </section>
+</div>
 
-<h2>What we don't collect</h2>
-<p>We don't use analytics or advertising SDKs, and we don't track your device,
-location, or behavior outside of the app. The only data collected is what's needed
-to run the interview and produce your saved memories.</p>
+<main id="main">
+  <section class="block" id="how" aria-labelledby="how-h">
+    <div class="shell">
+      <div class="intro">
+        <h2 id="how-h">Made for listening, not reading</h2>
+        <p>Your parent doesn't need good eyesight, typing, or any tech skills. They listen and they talk.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <h3>Every word is spoken aloud</h3>
+          <p>Each question is read in a natural voice, and your parent answers by talking, in their own words and at their own pace. Even the permission screens read themselves aloud. We tested it with VoiceOver, the screen reader built into every iPhone.</p>
+        </div>
+        <div class="feature">
+          <h3>It listens, then asks the next good question</h3>
+          <p>When they mention something, it asks about that. When they spell a name, it keeps their spelling and says it back once. If they say "I don't remember," it moves on kindly, without pressing. Next time, it remembers what they've already talked about.</p>
+        </div>
+        <div class="feature">
+          <h3>No scheduling, no one else in the room</h3>
+          <p>One answer over morning coffee or an hour on a quiet afternoon, and either counts as a whole conversation. You don't have to set up calls or be there to ask the questions. They open the app when they feel like talking.</p>
+        </div>
+        <div class="feature">
+          <h3>Easy to stop</h3>
+          <p>"Stop For Now" is always on the screen, and saying "I'd like to stop" works too. It ends warmly and picks up where they left off.</p>
+        </div>
+      </div>
+      <div class="topics">
+        <div>
+          <h3>It starts with their name, then their life</h3>
+          <p>It asks what they like to be called and the story behind their name. After that, it moves through the chapters of a life and comes back to any of them.</p>
+        </div>
+        <ol aria-label="Conversation topics">
+          <li>Childhood</li><li>Family and parents</li><li>School</li><li>Work</li><li>Love and marriage</li><li>Becoming a parent</li><li>Hard times</li><li>Community and belief</li><li>What they've learned</li><li>A day they'll never forget</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-<h2>How your information is used</h2>
-<p>Your audio, transcripts, and summaries are used solely to conduct your interview
-sessions and generate the memories you've asked the app to capture. They are not
-sold, shared with advertisers, or used for any purpose other than providing this
-service to you.</p>
+  <section class="block voice dark" id="voice" aria-labelledby="voice-h">
+    <div class="shell">
+      <blockquote>
+        <p>What would you give to hear your grandmother's grandmother's voice, describing her life in her own words? <span>And what is it worth to make sure your granddaughter's granddaughter can hear yours?</span></p>
+        <cite>AJ Curtis, founder</cite>
+      </blockquote>
+      <div class="facts">
+        <h2 id="voice-h">Their own voice, kept for the family</h2>
+        <p>Most tools keep only the words. With your parent's permission, Stories We Carry also keeps the recording of every answer: their voice, their laugh, the way they say a name. If they'd rather not be recorded, they can say no, and everything else works the same.</p>
+        <p>An answer can only be recorded once, in the moment it's spoken, so we built recording first. Ways to share the recordings come next.</p>
+        <p>Recordings are encrypted, kept for the long term, and never used to train AI.</p>
+        <div class="planned">
+          <strong>Planned: FamilySearch Memories</strong>
+          <p>We're working toward sending these recordings to FamilySearch Memories, where families keep photos, documents and audio alongside their family tree. That isn't available yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>How AI is used</h2>
-<p>Stories We Carry uses artificial intelligence to hold a natural conversation with
-you. Before your first interview, the app explains this and asks for your permission.
-Three Amazon Web Services (AWS) services are involved:</p>
-<ul>
-  <li><strong>Speech to text:</strong> your spoken answers are converted to text by
-  Amazon Transcribe.</li>
-  <li><strong>The interviewer:</strong> that text is sent to Claude, an AI model made
-  by Anthropic, which runs inside AWS through Amazon Bedrock. Claude uses it to ask
-  thoughtful follow-up questions. Anthropic does not receive your data, and Amazon
-  Bedrock does not store it or use it to train models.</li>
-  <li><strong>The interviewer's voice:</strong> each question is turned into speech
-  by Amazon Polly.</li>
-</ul>
-<p>Our AWS account is configured to opt out of AWS using any of this content to
-improve or train its AI services. Your stories are never used to train AI models.</p>
+  <section class="block" aria-labelledby="keep-h">
+    <div class="shell split">
+      <div>
+        <h2 id="keep-h">What stays with the family</h2>
+        <p>Each conversation is written down as they talk, and they can ask for a written copy by email. Along with the recordings, that's the start of a family archive in their own words.</p>
+        <p>Their stories are never sold, never shared with advertisers, and never used to train AI. <a href="https://storieswecarry.app/privacy/">Read the privacy policy</a>.</p>
+      </div>
+      <dl class="faq">
+        <div><dt>Who gets the written copy?</dt><dd>It's emailed to your parent, at the address on their own account. From there, they can share it however they like.</dd></div>
+        <div><dt>What does my parent need?</dt><dd>An iPhone and a quiet spot. Someone may need to help with the first setup and sign-in. After that, it's talking.</dd></div>
+        <div><dt>Is there a cost?</dt><dd>The beta is free. Pricing isn't set yet.</dd></div>
+      </dl>
+    </div>
+  </section>
 
-<h2>Recordings of your voice</h2>
-<p>Before your first interview, the app asks, out loud, whether it may keep
-recordings of your voice as you answer, so your family can one day hear your stories
-in your own voice. You can say no. If you do, nothing is recorded or kept, only the
-written words, and everything else works the same.</p>
-<p>If you say yes:</p>
-<ul>
-  <li>Each spoken answer is saved as an audio file on your phone and then uploaded
-  to Amazon Web Services. Until an upload succeeds, the recording stays on your
-  phone so it isn't lost.</li>
-  <li>Recordings are encrypted and stored separately for each person. Only your own
-  account can add recordings to your interviews.</li>
-  <li>Recordings are kept long-term, because preserving your voice is the point.
-  They are never sold, shared with advertisers, or used to train AI. If you ask
-  us to delete them, we will.</li>
-</ul>
+  <section class="block involve" aria-labelledby="join-h">
+    <div class="shell">
+      <div class="intro">
+        <h2 id="join-h">Write to us</h2>
+        <p>Stories We Carry is new and small. Every note gets a reply from the person who built it.</p>
+      </div>
+      <div class="audiences">
+        <article class="aud" id="try-it" aria-labelledby="try-h">
+          <h3 id="try-h">Try it with your mom or dad</h3>
+          <p>We're in a small beta on iPhone. If you'd like your parent to be one of the next to try it, tell us a little about them: roughly how old they are, how they get on with their phone, and what you hope they'll talk about.</p>
+        </article>
+        <article class="aud" id="family-history" aria-labelledby="fh-h">
+          <h3 id="fh-h">The stories behind the names</h3>
+          <p>A family tree has names and dates. These conversations record the rest, in the voices of the people still here to tell it. We're working toward a FamilySearch connection so the stories and recordings can live where your family already keeps its history. It isn't available yet.</p>
+        </article>
+        <article class="aud" id="follow-along" aria-labelledby="fa-h">
+          <h3 id="fa-h">Follow along</h3>
+          <p>The most helpful things right now are introductions to families who might like to try it, and honest feedback on what you see here. If a parent or grandparent comes to mind, write and tell us.</p>
+        </article>
+      </div>
+      <div class="contact">
+        <a class="addr" href="mailto:hello@storieswecarry.app">hello@storieswecarry.app</a>
+        <button type="button" class="copy" id="copy-hello" data-copy="hello@storieswecarry.app">Copy address</button>
+        <p class="hint">One address for all three. Tell us which one brought you here.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Emailing a copy of a conversation</h2>
-<p>At the end of a conversation, you can ask the app to email you a written copy.
-It goes only to the email address on your own account, and the app asks first.
-Once it's in your inbox, it's outside the app's protection, so anyone who can
-open that inbox can read it.</p>
+  <section class="block" aria-labelledby="why-h">
+    <div class="shell">
+      <div class="note">
+        <h2 id="why-h">Why I built this</h2>
+        <p>A lot of people mean to tell their life story and never start. They don't know where to begin, they edit themselves before they've said anything, and it never feels like there's time. I built Stories We Carry so the asking is taken care of, in short bursts or long sessions, without putting anyone out.</p>
+        <p class="faith">For me, it's part of turning the hearts of the children to their fathers, and the hearts of the fathers to their children.</p>
+        <p class="sig">AJ Curtis, founder</p>
+        <div class="name">
+          <h3>Why "Stories We Carry"</h3>
+          <p>Every family carries stories: the ones our parents told us, and the ones only they can tell. We carry them with us, and one day we hand them to the people who come after us. The name is a reminder that those stories are ours to keep and to pass on, and that they're worth recording before they're lost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<h2>Where it's stored</h2>
-<p>Data is stored using Amazon Web Services (AWS) infrastructure. Access is
-restricted to what the app needs to function.</p>
+<footer class="site">
+  <div class="shell">
+    <ul>
+      <li><a href="https://storieswecarry.app/privacy/">Privacy policy</a></li>
+      <li><a href="https://storieswecarry.app/start/">Getting started (for beta testers)</a></li>
+      <li><a href="mailto:hello@storieswecarry.app">hello@storieswecarry.app</a></li>
+    </ul>
+    <p>Stories We Carry is not affiliated with or endorsed by FamilySearch. iPhone and VoiceOver are trademarks of Apple Inc.</p>
+    <p>© 2026 Stories We Carry</p>
+  </div>
+</footer>
 
-<h2>Your choices</h2>
-<p>If you'd like your data deleted, including any recordings of your voice, or have questions about this policy, contact us
-at the address below.</p>
-
-<h2>Contact</h2>
-<p><a href="mailto:privacy@storieswecarry.app">privacy@storieswecarry.app</a></p>
-
+<script>
+(function(){
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var text=btn.getAttribute('data-copy');
+      function ok(){btn.textContent='Copied';btn.setAttribute('data-done','');setTimeout(function(){btn.textContent='Copy address';btn.removeAttribute('data-done');},2000);}
+      function fail(){var a=btn.parentNode.querySelector('.addr');if(!a)return;var r=document.createRange();r.selectNodeContents(a);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';}
+      try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok,fail);}else{fail();}}catch(e){fail();}
+    });
+  });
+})();
+</script>
 </body>
 </html>
