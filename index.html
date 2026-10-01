@@ -14,145 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
-<style>
-/* Layout: the app icon's world. Dark ember bands (hero, voice, footer) around plain white reading sections; one committed look in every theme. */
-:root{
-  --espresso:#221511; --rust:#8E3F17; --ember:#D65A1C; --amber:#F29A2E; --glow:#FFCB6E;
-  --paper:#FFFFFF; --ink:#2A1C16; --muted:#6A574C; --rule:#E7DCD3; --warm:#F7F1EC;
-  --on-dark:#FFF3E6; --on-dark-muted:#D8C2B1; --link:#A8410E;
-  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
-  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.1875rem/1.65 var(--body);-webkit-text-size-adjust:100%}
-a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:3px}
-h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.015em;color:var(--ink)}
-h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.02;font-weight:800}
-h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;font-weight:800}
-h3{font-size:1.3rem;line-height:1.25;font-weight:700}
-p{margin:0}
-.skip{position:absolute;left:16px;top:-60px;background:var(--glow);color:var(--espresso);padding:10px 14px;border-radius:4px;font-weight:700;z-index:10}
-.skip:focus{top:12px}
-.shell{max-width:1120px;margin:0 auto;padding-inline:20px}
-section.block{padding-block:84px}
-
-/* dark bands take the icon's gradient */
-.dark{background:linear-gradient(180deg,var(--espresso) 0%,#3A1F14 55%,var(--rust) 130%);color:var(--on-dark)}
-.dark h1,.dark h2,.dark h3{color:var(--on-dark)}
-.dark a{color:var(--glow)}
-
-/* header sits inside the hero band */
-header.top .shell{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 28px;padding-block:22px}
-.wordmark{display:inline-flex;align-items:center;gap:10px;font:700 1.3rem/1 var(--display);color:var(--on-dark);text-decoration:none;letter-spacing:-.01em}
-.dark a.wordmark{color:var(--on-dark)}
-.wordmark svg{width:26px;height:30px;flex:none}
-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 24px;font-size:1rem}
-header.top nav a{color:var(--on-dark);text-decoration:none}
-header.top nav a:hover{text-decoration:underline}
-header.top nav a.privacy{color:var(--glow);text-decoration:underline}
-
-/* hero */
-.hero .shell.body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:end;padding-block:48px 96px}
-.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
-.hero h1 em{font-style:normal;color:var(--glow)}
-.lede{font-size:1.3rem;line-height:1.55;color:var(--on-dark);max-width:34ch}
-.lede strong{color:var(--glow)}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
-.btn{display:inline-block;background:var(--glow);color:var(--espresso);font:700 1.05rem/1 var(--body);padding:17px 24px;border-radius:4px;text-decoration:none}
-.dark a.btn{color:var(--espresso)}
-.btn:hover{background:#FFD98F;text-decoration:none}
-.aside{color:var(--on-dark-muted);font-size:1rem}
-
-/* the spoken exchange: a transcript, lines ruled like a notebook */
-.exchange{margin:0;display:flex;flex-direction:column;min-width:0;border-left:3px solid var(--ember);padding-left:22px}
-.exchange .cap{font-size:.95rem;color:var(--on-dark-muted);font-style:italic;padding-bottom:10px}
-.turn{padding-block:12px;border-top:1px solid rgba(255,243,230,.14);display:flex;flex-direction:column;gap:2px}
-.who{font:700 .95rem/1.3 var(--display);color:var(--on-dark-muted)}
-.app .who{color:var(--amber)}
-.said{font-size:1.1rem;line-height:1.5;color:var(--on-dark)}
-.spell{font-weight:700;letter-spacing:.14em}
-
-/* how it works */
-.intro{display:flex;flex-direction:column;gap:14px;max-width:44rem}
-.intro p{color:var(--muted);font-size:1.2rem}
-.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 64px;margin-top:52px}
-.feature{display:flex;flex-direction:column;gap:10px;min-width:0}
-.feature h3{display:flex;gap:12px;align-items:baseline}
-.feature h3::before{content:"";flex:none;width:10px;height:10px;border-radius:50% 50% 50% 0;transform:rotate(-45deg) translateY(-2px);background:var(--ember)}
-.feature p{max-width:62ch}
-.topics{margin-top:56px;border-top:1px solid var(--rule);padding-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px 48px}
-.topics > div{display:flex;flex-direction:column;gap:10px;min-width:0}
-.topics p{max-width:40ch}
-.topics ol{margin:0;padding:0;list-style:none;columns:2;column-gap:40px;font:500 1.15rem/1.3 var(--display)}
-.topics li{padding-block:9px;border-bottom:1px solid var(--rule);break-inside:avoid}
-
-/* voice */
-.voice .shell{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:64px;align-items:start}
-.voice blockquote{margin:0;display:flex;flex-direction:column;gap:20px;min-width:0}
-.voice blockquote p{font:700 clamp(1.7rem,3.3vw,2.5rem)/1.2 var(--display);color:var(--on-dark);text-wrap:pretty;letter-spacing:-.01em}
-.voice blockquote p span{color:var(--glow)}
-.voice cite{font:400 1rem/1.3 var(--body);font-style:normal;color:var(--on-dark-muted)}
-.voice .facts{display:flex;flex-direction:column;gap:16px;min-width:0}
-.voice .facts h2{font-size:clamp(1.5rem,2.6vw,1.95rem)}
-.voice .facts p{color:var(--on-dark)}
-.planned{border-top:1px solid rgba(255,243,230,.18);padding-top:16px;display:flex;flex-direction:column;gap:6px}
-.planned strong{font-family:var(--display);color:var(--glow)}
-
-/* archive / faq */
-.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
-.split > div{display:flex;flex-direction:column;gap:16px;min-width:0}
-dl.faq{margin:0;display:flex;flex-direction:column}
-dl.faq > div{padding-block:16px;border-top:1px solid var(--rule)}
-dl.faq > div:last-child{border-bottom:1px solid var(--rule)}
-dl.faq dt{font:700 1.1rem/1.3 var(--display)}
-dl.faq dd{margin:6px 0 0}
-
-/* get involved */
-.involve{background:var(--warm)}
-.audiences{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;border-top:2px solid var(--ink)}
-.aud{padding:26px 28px 8px 0;display:flex;flex-direction:column;gap:12px;min-width:0;scroll-margin-top:24px}
-.aud + .aud{padding-left:28px;border-left:1px solid var(--rule)}
-.aud:target h3{background:linear-gradient(transparent 60%,rgba(242,154,46,.35) 60%)}
-.aud p{font-size:1.05rem}
-.contact{margin-top:40px;padding-top:28px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
-.contact .addr{font:700 clamp(1.3rem,2.6vw,1.7rem)/1.2 var(--display);color:var(--ink);word-break:break-all}
-.copy{font:700 .9rem/1 var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:11px 14px;cursor:pointer}
-.copy[data-done]{background:var(--ember)}
-.contact .hint{color:var(--muted);font-size:1rem;flex-basis:100%}
-
-/* founder note */
-.note{max-width:44rem;display:flex;flex-direction:column;gap:18px}
-.note p{font-size:1.2rem}
-.note .sig{font:700 1.05rem/1.3 var(--display)}
-.note .faith{color:var(--muted);font-style:italic;font-size:1.12rem}
-.name{margin-top:14px;border-left:3px solid var(--ember);padding-left:22px;display:flex;flex-direction:column;gap:10px}
-
-/* footer */
-footer.site{background:var(--espresso);color:var(--on-dark-muted);padding-block:44px 56px;font-size:.98rem}
-footer.site .shell{display:flex;flex-direction:column;gap:14px}
-footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px}
-footer.site a{color:var(--on-dark)}
-
-@media (max-width:860px){
-  .hero .shell.body,.split,.voice .shell,.topics{grid-template-columns:1fr}
-  .hero .shell.body{gap:44px;padding-block:28px 64px}
-  .features{grid-template-columns:1fr;gap:36px}
-  .audiences{grid-template-columns:1fr}
-  .aud,.aud + .aud{padding:24px 0 16px;border-left:0}
-  .aud + .aud{border-top:1px solid var(--rule)}
-  section.block{padding-block:60px}
-}
-@media (max-width:480px){
-  body{font-size:1.125rem}
-  .shell{padding-inline:16px}
-  .topics ol{columns:1}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -252,7 +114,17 @@ footer.site a{color:var(--on-dark)}
     </div>
   </section>
 
-  <section class="block" aria-labelledby="keep-h">
+  <section class="block yours" aria-labelledby="yours-h">
+    <div class="shell">
+      <div class="intro">
+        <h2 id="yours-h">Your stories count too</h2>
+        <p>We built Stories We Carry first for parents and grandparents, especially those who can't see the screen well. That's why it works entirely by voice. But anyone with stories worth keeping can use it, at any age from 18 up: your childhood, the people who shaped you, the days you don't want to forget. If you'd like to try it yourself, tell us when you write.</p>
+        <p><a class="btn-line" href="#try-it">Ask to try it yourself</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band-warm" aria-labelledby="keep-h">
     <div class="shell split">
       <div>
         <h2 id="keep-h">What stays with the family</h2>
@@ -267,7 +139,7 @@ footer.site a{color:var(--on-dark)}
     </div>
   </section>
 
-  <section class="block involve" aria-labelledby="join-h">
+  <section class="block" aria-labelledby="join-h">
     <div class="shell">
       <div class="intro">
         <h2 id="join-h">Write to us</h2>
@@ -275,8 +147,8 @@ footer.site a{color:var(--on-dark)}
       </div>
       <div class="audiences">
         <article class="aud" id="try-it" aria-labelledby="try-h">
-          <h3 id="try-h">Try it with your mom or dad</h3>
-          <p>We're in a small beta on iPhone. If you'd like your parent to be one of the next to try it, tell us a little about them: roughly how old they are, how they get on with their phone, and what you hope they'll talk about.</p>
+          <h3 id="try-h">Try it with your mom or dad, or yourself</h3>
+          <p>We're in a small beta on iPhone. If you'd like your parent, or you, to be one of the next to try it, tell us a little about who'd be using it: roughly how old they are, how they get on with their phone, and what you hope they'll talk about. Stories We Carry is for adults 18 and older.</p>
         </article>
         <article class="aud" id="family-history" aria-labelledby="fh-h">
           <h3 id="fh-h">The stories behind the names</h3>
@@ -316,6 +188,7 @@ footer.site a{color:var(--on-dark)}
     <ul>
       <li><a href="https://storieswecarry.app/privacy/">Privacy policy</a></li>
       <li><a href="https://storieswecarry.app/start/">Getting started (for beta testers)</a></li>
+      <li>For adults 18 and older</li>
       <li><a href="mailto:hello@storieswecarry.app">hello@storieswecarry.app</a></li>
     </ul>
     <p>Stories We Carry is not affiliated with or endorsed by FamilySearch. iPhone and VoiceOver are trademarks of Apple Inc.</p>
