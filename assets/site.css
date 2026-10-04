@@ -151,4 +151,7 @@ footer.site a{color:var(--on-dark)}
 .doc li::marker{color:var(--ember);font-weight:700}
 .doc .box{background:var(--warm);border-left:4px solid var(--ember);border-radius:0 6px 6px 0;padding:6px 22px 18px;display:flex;flex-direction:column;gap:12px}
 .doc .box h2{margin-top:14px}
+.doc .stop{border:3px solid var(--ember);border-radius:8px;background:var(--warm);padding:6px 22px 20px;display:flex;flex-direction:column;gap:12px}
+.doc .stop h2{margin-top:14px;color:var(--rust)}
+.doc .stop .stop-addr{font-size:1.3rem;font-weight:700;overflow-wrap:anywhere}
 @media (max-width:480px){.doc{padding:40px 16px 64px}}
