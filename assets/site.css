@@ -155,3 +155,11 @@ footer.site a{color:var(--on-dark)}
 .doc .stop h2{margin-top:14px;color:var(--rust)}
 .doc .stop .stop-addr{font-size:1.3rem;font-weight:700;overflow-wrap:anywhere}
 @media (max-width:480px){.doc{padding:40px 16px 64px}}
+.doc > *{min-width:0}
+.doc ol.steps p{margin:0}
+.doc ol.steps > li > * + *{margin-top:10px}
+.doc .shot{display:block;width:100%;max-width:min(100%,22rem);height:auto;border-radius:12px;border:1px solid var(--rule)}
+.doc .shot.wide{max-width:min(100%,26rem)}
+.doc .shot.narrow{max-width:min(100%,15rem)}
+.doc h3{font-size:clamp(1.2rem,2.2vw,1.4rem);margin-top:18px}
+.doc .addr-line{display:block;font-weight:700;overflow-wrap:anywhere;margin-block:4px}
