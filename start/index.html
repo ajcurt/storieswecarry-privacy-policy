@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <title>Getting Started · Stories We Carry</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2060%2070%22%3E%3Cpath%20d%3D%22M31%202%20C44%2012%2058%2024%2058%2036%20C58%2050%2044%2060%2029%2068%20C14%2060%202%2050%202%2036%20C2%2024%2017%2012%2031%202Z%22%20fill%3D%22%23D65A1C%22/%3E%3Cpath%20d%3D%22M30%2018%20C39%2025%2048%2032%2048%2040%20C48%2050%2039%2058%2030%2064%20C20%2058%2011%2050%2011%2040%20C11%2032%2021%2025%2030%2018Z%22%20fill%3D%22%23F29A2E%22/%3E%3Cpath%20d%3D%22M28%2033%20C34%2038%2040%2043%2040%2048%20C40%2055%2034%2060%2029%2064%20C23%2060%2017%2055%2017%2048%20C17%2043%2023%2038%2028%2033Z%22%20fill%3D%22%23FFCB6E%22/%3E%3C/svg%3E">
+<link rel="icon" href="/assets/mark-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Lexend:wght@700&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-<meta name="theme-color" content="#221511">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121412" media="(prefers-color-scheme: dark)">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -17,7 +20,7 @@
   <header class="top">
     <div class="shell">
       <a class="wordmark" href="https://storieswecarry.app/">
-        <svg viewBox="0 0 60 70" aria-hidden="true"><path d="M31 2 C44 12 58 24 58 36 C58 50 44 60 29 68 C14 60 2 50 2 36 C2 24 17 12 31 2Z" fill="#D65A1C"/><path d="M30 18 C39 25 48 32 48 40 C48 50 39 58 30 64 C20 58 11 50 11 40 C11 32 21 25 30 18Z" fill="#F29A2E"/><path d="M28 33 C34 38 40 43 40 48 C40 55 34 60 29 64 C23 60 17 55 17 48 C17 43 23 38 28 33Z" fill="#FFCB6E"/></svg>
+        <picture><source srcset="/assets/mark-dark.svg" media="(prefers-color-scheme: dark)"><img src="/assets/mark.svg" alt="" width="40" height="40"></picture>
         Stories We Carry
       </a>
       <nav aria-label="Site">
@@ -206,14 +209,14 @@ Step 2.</p>
 
 <h2>Step 2: Two short questions</h2>
 <p>Before the first interview, the app reads two short notes out loud. To hear
-one again, tap <strong>Read this aloud again</strong>.</p>
+one again, tap <strong class="say">Read this aloud again</strong>.</p>
 <ol>
   <li><strong>"Before we begin."</strong> It explains that an AI holds the
   conversation, and that your stories are never used to train AI. Tap
-  <strong>I understand, let's begin</strong>.</li>
+  <strong class="say">I understand, let's begin</strong>.</li>
   <li><strong>Keeping your voice.</strong> It asks if it may keep recordings of
   your answers, so your family can one day hear your stories in your own
-  voice. Tap <strong>Yes, keep my voice</strong> or <strong>No, just the
+  voice. Tap <strong class="say">Yes, keep my voice</strong> or <strong class="say">No, just the
   words</strong>. Either way, everything else works the same.</li>
 </ol>
 
@@ -233,18 +236,18 @@ talking, you have an older version: update it in TestFlight (see
   <li><strong>Listen to the question.</strong> The first thing it asks about is
   your name: it checks that it has it right, and asks what you like to be
   called.</li>
-  <li>When the question is finished, tap the big <strong>Tap to Answer</strong>
+  <li>When the question is finished, tap the big <strong class="say">Tap to Answer</strong>
   button and start talking. Take as long as you like.</li>
   <li><strong>The very first time</strong>, your iPhone asks if Stories We Carry
   may use the microphone. Tap <strong>Allow</strong>. (If you tapped Don't
   Allow by mistake: open the iPhone's <strong>Settings</strong> app, find
   <strong>Stories We Carry</strong> (on newer iPhones it's under
   <strong>Apps</strong>), and turn <strong>Microphone</strong> on.)</li>
-  <li>When you've finished, tap <strong>Done Talking</strong>. The app takes a
+  <li>When you've finished, tap <strong class="say">Done Talking</strong>. The app takes a
   moment to think, then asks the next question.</li>
 </ol>
-<p>Now and then it pauses to ask if you'd like to go on. Tap <strong>Keep
-Going</strong> for another question, or <strong>Stop For Now</strong>.</p>
+<p>Now and then it pauses to ask if you'd like to go on. Tap <strong class="say">Keep
+Going</strong> for another question, or <strong class="say">Stop For Now</strong>.</p>
 
 <section class="box" id="helper" aria-labelledby="helper-h">
 <h2 id="helper-h">For the helper: before you hand the phone back</h2>
@@ -284,12 +287,12 @@ it. Many people won't say they can't find an app, so don't wait to be asked.</p>
 
 <h2>Stopping, and getting a written copy</h2>
 <ul>
-  <li><strong>Stop whenever you like.</strong> Tap <strong>Stop For Now</strong>.
-  It's under the Tap to Answer button. Or tap Tap to Answer and just say "I'd
-  like to stop."</li>
-  <li><strong>Get a written copy.</strong> After you stop, tap <strong>Email Me
+  <li><strong>Stop whenever you like.</strong> Tap <strong class="say">Stop For Now</strong>.
+  It's under the Tap to Answer button. Or tap Tap to Answer and just say "<span class="say">I'd
+  like to stop.</span>"</li>
+  <li><strong>Get a written copy.</strong> After you stop, tap <strong class="say">Email Me
   This Conversation</strong>. The first time, it asks you to confirm; tap
-  <strong>Yes, send it to me</strong>. The copy goes to the email address you
+  <strong class="say">Yes, send it to me</strong>. The copy goes to the email address you
   sign in with. The words come from speech recognition, so a few may be
   misheard.</li>
 </ul>
@@ -307,7 +310,7 @@ minutes or more), it gets ready and asks you a new question on its own.</p>
   normally would. There's no wrong way to answer.</li>
   <li><strong>If it gets a name wrong, just tell it.</strong> Spell the name out
   loud ("that's Jon, J-O-N") and it will remember the right spelling.</li>
-  <li><strong>It's fine to pause, or say "I don't remember."</strong> It won't
+  <li><strong>It's fine to pause, or say "<span class="say">I don't remember.</span>"</strong> It won't
   push. Memory doesn't work on command, and that's okay.</li>
   <li><strong>You can go back to anything.</strong> If more comes to mind later,
   just bring it up in another conversation.</li>
@@ -315,7 +318,7 @@ minutes or more), it gets ready and asks you a new question on its own.</p>
   again. If your screen went dark while you were talking, update the app in
   TestFlight (see <a href="#updates">Updates</a> below).</li>
   <li><strong>You need Wi-Fi or a phone signal.</strong> If it can't connect,
-  it says so. Tap <strong>Try Again</strong>.</li>
+  it says so. Tap <strong class="say">Try Again</strong>.</li>
 </ul>
 
 <h2 id="updates">Updates</h2>
